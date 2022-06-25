@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware JIMENEZ</title>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>JIMENEZ</h1>
+        
+        <input id="search" type="text" class="input" placeholder="Buscar componente">
+        <button id="boton-carrito">
+            <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
+        </button>
+    </header>
+    
+
+    <div class="seleccion">
+        <select id="seleccionarComponentes">
+            <option value="todo">Todos</option>
+            <option value="cpu">Procesador</option>
+            <option value="mobo">Motherboard</option>
+            <option value="mram">Memoria RAM</option>
+        </select>
+    </div>
+
+    <main id="contenedor-componentes">
+        <!-- acá se crearían los divs correspondientes al contenedor de los componentes, lo que me evitaría copiar y pegar muchas veces lo mismo por cada producto -->
+    </main>
+
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                
+            </div>
+            <p class="precioComponente">Precio total: $<span id="precioTotal">0</span></p>
+            <div id="finalizar" style="display: flex; justify-content: flex-end;"></div>
+        </div>
+    </div>
+
+    
+    <script src="js/stock.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
